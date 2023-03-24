@@ -1,10 +1,11 @@
 {
-  "name": "@cnakazawa/vite-ts-react-tailwind",
+  "name": "typescript-react-tailwind-vite-starter",
   "version": "0.0.1",
-  "author": "Christoph Nakazawa <christoph.pojer@gmail.com>",
+  "description": "✨ A starter for my TypeScript React project",
+  "author": "汪東陽 EastSun5566",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cpojer/vite-ts-react-tailwind.git"
+    "url": "https://github.com/EastSun5566/typescript-react-tailwind-vite-starter.git"
   },
   "type": "module",
   "engines": {
@@ -17,9 +18,7 @@
   },
   "devDependencies": {
     "@swc/core": "^1.3.36",
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^18.14.0",
-    "@types/prettier": "^2.7.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -27,8 +26,12 @@
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.34.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-define-config": "^1.17.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
@@ -36,8 +39,6 @@
     "eslint-plugin-unicorn": "^46.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.5",
     "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
@@ -47,10 +48,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "format": "prettier --write .",
-    "lint:format": "prettier --cache --check .",
-    "lint": "eslint --cache .",
-    "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
+    "test": "npm-run-all --parallel tsc:check vitest:run lint",
     "tsc:check": "tsc",
     "vitest:run": "vitest run"
   },

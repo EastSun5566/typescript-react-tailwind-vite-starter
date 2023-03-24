@@ -12,8 +12,6 @@ Read [the blog post about this template](https://cpojer.net/posts/fastest-fronte
 - [Tailwind](https://tailwindcss.com/)
 - [pnpm](https://pnpm.io/ja/) (_Optional_)
 
-![screenshot of `App.tsx`](./screenshot.png)
-
 ## Setup
 
 - Press the "Use this template" on the top of this repository's GitHub page.
@@ -32,11 +30,11 @@ _Note: You can install `pnpm` via `homebrew` on macOS: `brew install pnpm`._
 - Automatically sort imports when running prettier/saving the document via [`@trivago/prettier-plugin-sort-imports`](https://github.com/trivago/prettier-plugin-sort-imports).
 - Use `swc` with `ts-node` for fast node scripts with [ESM](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). See below ↓
 
-## Run node scripts with ESM and TypeScript, fast.
+## Run node scripts with ESM and TypeScript, fast
 
 Create a `script.ts` file, run `chmod x script.ts` and execute it via `./script.ts`.
 
-```
+```sh
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
 
 console.log('Your code goes here.');
@@ -44,7 +42,7 @@ console.log('Your code goes here.');
 
 Use this to restart your scripts instantly when a file changes:
 
-```
+```sh
 #!/usr/bin/env NODE_ENV=development node --watch --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
 
 console.log('This processes instantly restarts when a file changes.');

@@ -1,11 +1,17 @@
-module.exports = {
+// @ts-check
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { defineConfig } = require('eslint-define-config');
+
+module.exports = defineConfig({
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
   extends: [
-    'eslint:recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/typescript',
@@ -22,6 +28,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: './tsconfig.json',
     ecmaFeatures: {
       jsx: true,
     },
@@ -117,4 +124,4 @@ module.exports = {
       version: '18.0.0',
     },
   },
-};
+});

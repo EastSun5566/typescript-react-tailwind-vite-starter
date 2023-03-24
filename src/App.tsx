@@ -1,9 +1,14 @@
-const Link = (props: JSX.IntrinsicElements['a']) => (
-  <a
-    className="text-pink-500 underline hover:no-underline dark:text-pink-400"
-    {...props}
-  />
-);
+function Link({ children, ...restProps }: JSX.IntrinsicElements['a']) {
+  return (
+    <a
+      className="text-pink-500 underline hover:no-underline dark:text-pink-400"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...restProps}
+    >
+      {children}
+    </a>
+  );
+}
 
 export default function App() {
   return (
@@ -13,16 +18,28 @@ export default function App() {
         <em>Minimal, fast, sensible defaults.</em>
       </p>
       <p className="my-4">
-        Using <Link href="https://vitejs.dev/">Vite</Link>,{' '}
-        <Link href="https://reactjs.org/">React</Link>,{' '}
-        <Link href="https://www.typescriptlang.org/">TypeScript</Link> and{' '}
-        <Link href="https://tailwindcss.com/">Tailwind</Link>.
+        Using
+        {' '}
+        <Link href="https://vitejs.dev/">Vite</Link>
+        ,
+        {' '}
+        <Link href="https://reactjs.org/">React</Link>
+        ,
+        {' '}
+        <Link href="https://www.typescriptlang.org/">TypeScript</Link>
+        {' '}
+        and
+        {' '}
+        <Link href="https://tailwindcss.com/">Tailwind</Link>
+        .
       </p>
       <p className="my-4">
-        Change{' '}
+        Change
+        {' '}
         <code className="border-1 2py-1 rounded border border-pink-500 bg-neutral-100 px-1 font-mono text-pink-500 dark:border-pink-400 dark:bg-neutral-700 dark:text-pink-400">
           src/App.tsx
-        </code>{' '}
+        </code>
+        {' '}
         for live updates.
       </p>
     </div>
