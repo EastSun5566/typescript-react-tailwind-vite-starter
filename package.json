@@ -48,7 +48,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src",
     "test": "npm-run-all --parallel tsc:check vitest:run lint",
     "tsc:check": "tsc",
     "vitest:run": "vitest run"

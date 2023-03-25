@@ -16,8 +16,7 @@
     "target": "es2017",
     "types": ["vite/client"]
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src"],
   "ts-node": {
     "transpileOnly": true,
     "transpiler": "ts-node/transpilers/swc",
