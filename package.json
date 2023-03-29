@@ -8,10 +8,6 @@
     "url": "https://github.com/EastSun5566/typescript-react-tailwind-vite-starter.git"
   },
   "type": "module",
-  "engines": {
-    "node": ">=18.11.0",
-    "pnpm": ">=7.1.0"
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
