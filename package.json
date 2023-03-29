@@ -35,6 +35,7 @@
     "eslint-plugin-unicorn": "^46.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
+    "simple-git-hooks": "^2.8.1",
     "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
@@ -53,5 +54,8 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint"
+  }
 }
