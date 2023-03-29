@@ -2,12 +2,18 @@
   "name": "typescript-react-tailwind-vite-starter",
   "version": "0.0.1",
   "description": "✨ A starter for my TypeScript React project",
-  "author": "汪東陽 EastSun5566",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EastSun5566/typescript-react-tailwind-vite-starter.git"
-  },
   "type": "module",
+  "main": "dist/index.html",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src",
+    "test": "npm-run-all --parallel tsc:check vitest:run lint",
+    "tsc:check": "tsc",
+    "vitest:run": "vitest run"
+  },
+  "author": "汪東陽 EastSun5566",
+  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -41,14 +47,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.1.4",
     "vitest": "^0.29.5"
-  },
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src",
-    "test": "npm-run-all --parallel tsc:check vitest:run lint",
-    "tsc:check": "tsc",
-    "vitest:run": "vitest run"
   },
   "browserslist": [
     ">0.2%",
